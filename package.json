@@ -1,12 +1,19 @@
 {
   "name": "wide-align",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A wide-character aware text alignment function for use on the console or with fixed width fonts.",
   "main": "align.js",
   "scripts": {
     "test": "tap --coverage test/*.js"
   },
-  "keywords": ["wide", "double", "unicode", "cjkv", "pad", "align"],
+  "keywords": [
+    "wide",
+    "double",
+    "unicode",
+    "cjkv",
+    "pad",
+    "align"
+  ],
   "author": "Rebecca Turner <me@re-becca.org> (http://re-becca.org/)",
   "license": "ISC",
   "repository": {
