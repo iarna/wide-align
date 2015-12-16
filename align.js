@@ -25,34 +25,37 @@ function createPadding (width) {
 }
 
 function alignLeft (str, width) {
-  str = str.trim()
+  var trimmed = str.trim()
+  if (trimmed.length === 0 && str.length >= width) return str
   var padding = ''
-  var strWidth = stringWidth(str)
+  var strWidth = stringWidth(trimmed)
 
   if (strWidth < width) {
     padding = createPadding(width - strWidth)
   }
 
-  return str + padding
+  return trimmed + padding
 }
 
 function alignRight (str, width) {
-  str = str.trim()
+  var trimmed = str.trim()
+  if (trimmed.length === 0 && str.length >= width) return str
   var padding = ''
-  var strWidth = stringWidth(str)
+  var strWidth = stringWidth(trimmed)
 
   if (strWidth < width) {
     padding = createPadding(width - strWidth)
   }
 
-  return padding + str
+  return padding + trimmed
 }
 
 function alignCenter (str, width) {
-  str = str.trim()
+  var trimmed = str.trim()
+  if (trimmed.length === 0 && str.length >= width) return str
   var padLeft = ''
   var padRight = ''
-  var strWidth = stringWidth(str)
+  var strWidth = stringWidth(trimmed)
 
   if (strWidth < width) {
     var padLeftBy = parseInt((width - strWidth) / 2, 10) 
@@ -60,5 +63,5 @@ function alignCenter (str, width) {
     padRight = createPadding(width - (strWidth + padLeftBy))
   }
 
-  return padLeft + str + padRight
+  return padLeft + trimmed + padRight
 }

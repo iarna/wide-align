@@ -17,5 +17,17 @@ test('align', function (t) {
   t.is(align.right('abc', 2), 'abc', 'right narrow overflow')
   t.is(align.right('古古古', 4), '古古古', 'right wide overflow')
 
+  t.is(align.left('', 5), '     ', 'left align nothing')
+  t.is(align.center('', 5), '     ', 'center align nothing')
+  t.is(align.right('', 5), '     ', 'right align nothing')
+
+  t.is(align.left('   ', 5), '     ', 'left align whitespace')
+  t.is(align.center('   ', 5), '     ', 'center align whitespace')
+  t.is(align.right('   ', 5), '     ', 'right align whitespace')
+
+  t.is(align.left('   ', 2), '   ', 'left align whitespace overflow')
+  t.is(align.center('   ', 2), '   ', 'center align whitespace overflow')
+  t.is(align.right('   ', 2), '   ', 'right align whitespace overflow')
+
   t.end()
 })
