@@ -29,5 +29,9 @@ test('align', function (t) {
   t.is(align.center('   ', 2), '   ', 'center align whitespace overflow')
   t.is(align.right('   ', 2), '   ', 'right align whitespace overflow')
 
+  t.is(align.left('x         ', 10), 'x         ', 'left align whitespace mix')
+  t.is(align.center('x         ', 10), '    x     ', 'center align whitespace mix')
+  t.is(align.right('x         ', 10), '         x', 'right align whitespace mix')
+
   t.end()
 })

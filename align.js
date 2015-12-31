@@ -16,10 +16,8 @@ function createPadding (width) {
       result += string;
     }
     n = Math.floor(n / 2);
-    string += ' ';
+    string += string;
   } while (n);
-
-  if (width !== result.length) result += ' '
 
   return result;
 }
