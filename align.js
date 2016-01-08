@@ -23,7 +23,7 @@ function createPadding (width) {
 }
 
 function alignLeft (str, width) {
-  var trimmed = str.trim()
+  var trimmed = str.trimRight()
   if (trimmed.length === 0 && str.length >= width) return str
   var padding = ''
   var strWidth = stringWidth(trimmed)
@@ -36,7 +36,7 @@ function alignLeft (str, width) {
 }
 
 function alignRight (str, width) {
-  var trimmed = str.trim()
+  var trimmed = str.trimLeft()
   if (trimmed.length === 0 && str.length >= width) return str
   var padding = ''
   var strWidth = stringWidth(trimmed)
