@@ -24,6 +24,6 @@
     "string-width": "^1.0.1"
   },
   "devDependencies": {
-    "tap": "^2.3.2"
+    "tap": "^7.1.0"
   }
 }
