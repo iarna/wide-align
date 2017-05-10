@@ -1,6 +1,6 @@
 {
   "name": "wide-align",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A wide-character aware text alignment function for use on the console or with fixed width fonts.",
   "main": "align.js",
   "scripts": {
