@@ -27,6 +27,9 @@
   "devDependencies": {
     "tap": "^10.3.2"
   },
+  "engines": {
+    "node": ">=4"
+  },
   "files": [
     "align.js"
   ]
