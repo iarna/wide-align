@@ -1,7 +1,9 @@
 language: node_js
 os:
   - linux
-env: STRING_WIDTH_VERSION=4
+env:
+  STRING_WIDTH_VERSION: "4"
+  TAP_VERSION: "12"
 jobs:
   include:
     - node_js: "13"
@@ -9,9 +11,10 @@ jobs:
     - node_js: "10"
     - node_js: "8"
     - node_js: "6"
-      env: STRING_WIDTH_VERSION=3
-    - node_js: "4"
-      env: STRING_WIDTH_VERSION=2
+      env:
+        STRING_WIDTH_VERSION: "3"
+        TAP_VERSION: "11"
 
 before_install:
   - npm install "string-width@${STRING_WIDTH_VERSION}"
+  - npm install "tap@${TAP_VERSION}"
