@@ -15,19 +15,23 @@
     "pad",
     "align"
   ],
+  "engines": {
+    "node": ">=12.20"
+  },
+  "type": "module",
   "author": "Rebecca Turner <me@re-becca.org> (http://re-becca.org/)",
   "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/iarna/wide-align"
   },
-  "dependencies": {
-    "string-width": "^1.0.2 || 2"
-  },
-  "devDependencies": {
-    "tap": "10 || 11 || 12"
-  },
   "files": [
     "align.js"
-  ]
+  ],
+  "dependencies": {
+    "string-width": "^5.0.0"
+  },
+  "devDependencies": {
+    "tap": "^15.0.9"
+  }
 }
