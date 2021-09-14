@@ -6,7 +6,7 @@ console.
 
 ### Usage
 
-```
+```js
 import align from 'wide-align'
 
 // Note that if you view this on a unicode console, all of the slashes are
