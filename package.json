@@ -22,7 +22,7 @@
     "url": "https://github.com/iarna/wide-align"
   },
   "dependencies": {
-    "string-width": "^1.0.2 || 2"
+    "string-width": "^4.2.3"
   },
   "devDependencies": {
     "tap": "10 || 11 || 12"
