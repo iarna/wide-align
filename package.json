@@ -1,11 +1,10 @@
 {
   "name": "wide-align",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "A wide-character aware text alignment function for use on the console or with fixed width fonts.",
   "main": "align.js",
   "scripts": {
-    "test": "tap --coverage test/*.js",
-    "version": "perl -pi -e 's/^(  \"version\": $ENV{npm_config_node_version}\").*?\",/$1abc\",/' package-lock.json ; git add package-lock.json"
+    "test": "tap --coverage test/*.js"
   },
   "keywords": [
     "wide",
