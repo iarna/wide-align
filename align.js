@@ -1,32 +1,32 @@
 'use strict'
-var stringWidth = require('string-width')
-
-exports.center = alignCenter
-exports.left = alignLeft
-exports.right = alignRight
+const stringWidth = require('string-width')
 
 // lodash's way of generating pad characters.
 
 function createPadding (width) {
-  var result = ''
-  var string = ' '
-  var n = width
+  let result = ''
+  let string = ' '
+  let n = width
   do {
     if (n % 2) {
-      result += string;
+      result += string
     }
-    n = Math.floor(n / 2);
-    string += string;
-  } while (n);
+    n = Math.floor(n / 2)
+    string += string
+  } while (n)
 
-  return result;
+  return result
 }
 
+/**
+ * @param {string} str
+ * @param {number} width
+ */
 function alignLeft (str, width) {
-  var trimmed = str.trimRight()
+  const trimmed = str.trimEnd()
   if (trimmed.length === 0 && str.length >= width) return str
-  var padding = ''
-  var strWidth = stringWidth(trimmed)
+  let padding = ''
+  const strWidth = stringWidth(trimmed)
 
   if (strWidth < width) {
     padding = createPadding(width - strWidth)
@@ -35,11 +35,15 @@ function alignLeft (str, width) {
   return trimmed + padding
 }
 
+/**
+ * @param {string} str
+ * @param {number} width
+ */
 function alignRight (str, width) {
-  var trimmed = str.trimLeft()
+  const trimmed = str.trimStart()
   if (trimmed.length === 0 && str.length >= width) return str
-  var padding = ''
-  var strWidth = stringWidth(trimmed)
+  let padding = ''
+  const strWidth = stringWidth(trimmed)
 
   if (strWidth < width) {
     padding = createPadding(width - strWidth)
@@ -48,18 +52,26 @@ function alignRight (str, width) {
   return padding + trimmed
 }
 
+/**
+ * @param {string} str
+ * @param {number} width
+ */
 function alignCenter (str, width) {
-  var trimmed = str.trim()
+  const trimmed = str.trim()
   if (trimmed.length === 0 && str.length >= width) return str
-  var padLeft = ''
-  var padRight = ''
-  var strWidth = stringWidth(trimmed)
+  let padLeft = ''
+  let padRight = ''
+  const strWidth = stringWidth(trimmed)
 
   if (strWidth < width) {
-    var padLeftBy = parseInt((width - strWidth) / 2, 10) 
+    const padLeftBy = Math.floor((width - strWidth) / 2)
     padLeft = createPadding(padLeftBy)
     padRight = createPadding(width - (strWidth + padLeftBy))
   }
 
   return padLeft + trimmed + padRight
 }
+
+exports.center = alignCenter
+exports.left = alignLeft
+exports.right = alignRight

@@ -14,6 +14,9 @@
     "pad",
     "align"
   ],
+  "engines": {
+    "node": ">=6"
+  },
   "author": "Rebecca Turner <me@re-becca.org> (http://re-becca.org/)",
   "license": "ISC",
   "repository": {

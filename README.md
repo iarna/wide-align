@@ -7,7 +7,7 @@ console.
 ### Usage
 
 ```
-var align = require('wide-align')
+const align = require('wide-align')
 
 // Note that if you view this on a unicode console, all of the slashes are
 // aligned. This is because on a console, all narrow characters are
